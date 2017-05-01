@@ -1,0 +1,13 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: test-ingress
+spec:
+  rules:
+  - host: core-gabi.mbedcloudintegration.net
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: echoheaders
+          servicePort: 80
